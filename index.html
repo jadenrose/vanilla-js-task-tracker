@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
+
+		<title>Jaden Rose - Assignment 2 - ICT 443</title>
+
+		<script
+			src="https://kit.fontawesome.com/a0215abb7b.js"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">ICT 443 019 - Jaden Rose</div>
+			<span>Assignment 2</span>
+		</header>
+
+		<main>
+			<div class="container">
+				<button id="add-button" class="filled add-button">
+					<i class="fas fa-plus-circle"></i>
+					<span>add task</span>
+				</button>
+				<form id="task-form" class="task-form">
+					<h2>new task</h2>
+					<label>
+						<span>task category</span>
+						<select id="task-category">
+							<option value="" selected>no category</option>
+							<option value="groceries">groceries</option>
+							<option value="bills">bills</option>
+							<option value="chores">chores</option>
+							<option value="work">work</option>
+							<option value="other">other:</option>
+						</select>
+					</label>
+
+					<div class="extra-fields" id="groceries-fields">
+						<label class="add-grocery-item">
+							<span>grocery item</span>
+							<input id="grocery-item-input" type="text" />
+							<button id="grocery-item-button">add item</button>
+						</label>
+						<div class="grocery-list" id="grocery-list"></div>
+						<label>
+							<span>budget ($)</span>
+							<input id="groceries-budget" type="number" />
+						</label>
+					</div>
+
+					<div class="extra-fields" id="bills-fields">
+						<label>
+							<span>pay to</span>
+							<input id="bill-pay-to" type="text" />
+						</label>
+						<label>
+							<span>bill amount</span>
+							<input id="bill-amount" type="number" />
+						</label>
+					</div>
+
+					<div class="extra-fields" id="chores-fields">
+						<label>
+							<span>estimated time (mins)</span>
+							<input type="number" id="chore-time" />
+						</label>
+						<label>
+							<span>location/room</span>
+							<input type="text" id="chore-location" />
+						</label>
+					</div>
+
+					<div class="extra-fields" id="work-fields">
+						<label>
+							<span>client</span>
+							<input type="text" id="work-client" />
+						</label>
+						<label>
+							<span>work type</span>
+							<select id="work-type">
+								<option value="development">development</option>
+								<option value="it">IT support</option>
+								<option value="design">design</option>
+								<option value="marketing">marketing</option>
+							</select>
+						</label>
+					</div>
+
+					<label>
+						<span>task name</span>
+						<input id="task-name" type="text" />
+					</label>
+					<label>
+						<span>task description</span>
+						<textarea id="task-description" type="text"></textarea>
+					</label>
+					<label>
+						<span>task date</span>
+						<input id="task-date" type="date" />
+					</label>
+					<label id="urgent-label" class="flex-label">
+						<i id="urgent-checkbox" class="urgent-checkbox far"></i>
+						<span>urgent</span>
+					</label>
+					<div class="buttons">
+						<button id="save-button" class="filled">save</button>
+						<button id="cancel-button">cancel</button>
+					</div>
+				</form>
+				<div class="tasks-container">
+					<p id="show-hide-tasks" class="show-hide-tasks">
+						<span>hide tasks</span>
+					</p>
+					<div id="task-list" class="task-list"></div>
+					<p id="delete-all-tasks" class="delete-all-tasks">
+						<span>delete all tasks</span>
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<noscript>enable JavaScript to view this page</noscript>
+	</body>
+</html>
